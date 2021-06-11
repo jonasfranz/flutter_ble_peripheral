@@ -11,7 +11,7 @@ import CoreLocation
 
 class Peripheral : NSObject, CBPeripheralManagerDelegate {
     
-    let peripheralManager: CBPeripheralManager
+    var peripheralManager: CBPeripheralManager!
     var peripheralData: NSDictionary!
     var onAdvertisingStateChanged: ((Bool) -> Void)?
     var dataToBeAdvertised: [String: [CBUUID]]!
